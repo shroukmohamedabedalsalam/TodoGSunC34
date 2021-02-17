@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TodoAppGSun</string>
+    <string name="task_added_successfully">Task Added Successfully</string>
+    <string name="ok">ok</string>
 </resources>
