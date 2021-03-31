@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.route.todoappgsun.database.model.Task
 import kotlinx.android.synthetic.main.item_task.view.*
+import java.lang.reflect.Array.get
 
 class TasksAdapter(var tasks:List<Task>)
     :RecyclerView.Adapter<TasksAdapter.ViewHolder> (){
@@ -29,8 +30,11 @@ class TasksAdapter(var tasks:List<Task>)
     }
 
     fun changeData(tasks: List<Task>) {
-        this.tasks=tasks
+        this.tasks = tasks
         notifyDataSetChanged()
+
+    }fun gettaskbypositon(position: Int):Task{
+        return tasks.get(position)
     }
 
     class ViewHolder(itemView:View):RecyclerView.ViewHolder(itemView){
